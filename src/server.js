@@ -1,5 +1,5 @@
 const Hapi = require('@hapi/hapi');
-const routes = require('./notes');
+const routes = require('./routes');
  
  
 const init = async () => {
@@ -13,7 +13,7 @@ const init = async () => {
       },
   });
  
-  server.route(routes);
+  server.route(routes); //memasuki dalam routes.js untuk mengatasi hal-hal URL routing
 
   await server.start();
   console.log(`Server berjalan pada ${server.info.uri}`);
